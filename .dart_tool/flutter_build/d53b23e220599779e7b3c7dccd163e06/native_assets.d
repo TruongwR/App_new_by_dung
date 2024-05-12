@@ -1,0 +1,1 @@
+ E:\\NewsApp-UIkit-Flutter\\.dart_tool\\flutter_build\\d53b23e220599779e7b3c7dccd163e06\\native_assets.yaml: 

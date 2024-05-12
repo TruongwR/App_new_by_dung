@@ -1,0 +1,14 @@
+com.example.news_app_ui.app-jetified-window-java-1.0.0-beta04-0 C:\Users\truon\.gradle\caches\transforms-3\006d93cd422dbc43e89591147c2de572\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.news_app_ui.app-core-1.6.0-1 C:\Users\truon\.gradle\caches\transforms-3\4ca28c4a71705f8a687c69dda140a277\transformed\core-1.6.0\res
+com.example.news_app_ui.app-jetified-annotation-experimental-1.1.0-2 C:\Users\truon\.gradle\caches\transforms-3\8965c941cf4bee4d72541b965c7c9d39\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.news_app_ui.app-jetified-window-1.0.0-beta04-3 C:\Users\truon\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\res
+com.example.news_app_ui.app-debug-4 E:\NewsApp-UIkit-Flutter\android\app\src\debug\res
+com.example.news_app_ui.app-main-5 E:\NewsApp-UIkit-Flutter\android\app\src\main\res
+com.example.news_app_ui.app-pngs-6 E:\NewsApp-UIkit-Flutter\build\app\generated\res\pngs\debug
+com.example.news_app_ui.app-resValues-7 E:\NewsApp-UIkit-Flutter\build\app\generated\res\resValues\debug
+com.example.news_app_ui.app-rs-8 E:\NewsApp-UIkit-Flutter\build\app\generated\res\rs\debug
+com.example.news_app_ui.app-mergeDebugResources-9 E:\NewsApp-UIkit-Flutter\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.news_app_ui.app-mergeDebugResources-10 E:\NewsApp-UIkit-Flutter\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.news_app_ui.app-merged_res-11 E:\NewsApp-UIkit-Flutter\build\app\intermediates\merged_res\debug
+com.example.news_app_ui.app-packaged_res-12 E:\NewsApp-UIkit-Flutter\build\path_provider_android\intermediates\packaged_res\debug
+com.example.news_app_ui.app-packaged_res-13 E:\NewsApp-UIkit-Flutter\build\shared_preferences_android\intermediates\packaged_res\debug
