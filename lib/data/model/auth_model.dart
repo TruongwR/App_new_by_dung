@@ -1,8 +1,7 @@
 import 'dart:convert';
 
 import 'package:intl/intl.dart';
-import 'package:news_app_ui/data/model/clinic_model.dart';
-import 'package:news_app_ui/data/model/specialization_model.dart';
+
 
 Auth authFromJson(String str) => Auth.fromJson(json.decode(str));
 
@@ -13,8 +12,7 @@ class Auth {
   String? refreshToken;
   final User? user;
   final int? id;
-  final Clinic? clinic;
-  final Specialization? specialization;
+
   int? type;
   bool? active;
 
@@ -22,9 +20,9 @@ class Auth {
     this.accessToken,
     this.refreshToken,
     this.user,
-    this.clinic,
+
     this.id,
-    this.specialization,
+
     this.type,
     this.active,
   });
@@ -34,8 +32,7 @@ class Auth {
     User? user,
     String? refreshToken,
     int? id,
-    Clinic? clinic,
-    Specialization? specialization,
+
     int? type,
     bool? active,
   }) =>
@@ -43,9 +40,9 @@ class Auth {
         accessToken: accessToken ?? this.accessToken,
         user: user ?? this.user,
         refreshToken: refreshToken ?? this.refreshToken,
-        clinic: clinic ?? this.clinic,
+
         id: id ?? this.id,
-        specialization: specialization ?? this.specialization,
+
         active: active ?? this.active,
         type: type ?? this.type,
       );
@@ -53,16 +50,15 @@ class Auth {
   factory Auth.fromJson(Map<String, dynamic> json) {
     Map<String, dynamic> jsonUser = {};
     int id = 0;
-    Clinic clinic = Clinic.empty();
-    Specialization specialization = Specialization.empty();
+
+
     int? type;
     bool active = true;
 
     if (json.containsKey('data') && json['data'] is Map<String, dynamic> && json['data'].containsKey('user')) {
       jsonUser = json["data"]["user"];
       id = json["data"]["id"];
-      clinic = Clinic.fromJson(json["data"]["clinic"]);
-      specialization = Specialization.fromJson(json["data"]["specialization"]);
+
 
       // active json["data"]["active"];
     } else if (json.containsKey('data') && json['data'] is Map<String, dynamic> && json['data'].containsKey('name')) {
@@ -79,25 +75,18 @@ class Auth {
       refreshToken: json["refreshToken"],
       user: json["data"] == null ? null : User.fromJson(jsonUser),
       id: id,
-      clinic: clinic,
-      specialization: specialization,
+
       type: type,
       active: active,
     );
   }
   factory Auth.fromJsonOld(Map<String, dynamic> json) {
     int id = 0;
-    Clinic clinic = Clinic.empty();
-    Specialization specialization = Specialization.empty();
+
     int? type;
     bool active = true;
 
-    if (json["clinic"] != null) {
-      clinic = Clinic.fromJson(json["clinic"]);
-    }
-    if (json["specialization"] != null) {
-      specialization = Specialization.fromJson(json["specialization"]);
-    }
+
     if (json["type"] != null) {
       type = json["type"];
     }
@@ -112,8 +101,7 @@ class Auth {
       refreshToken: json["refreshToken"],
       user: User.fromJson(json["user"]),
       id: id,
-      clinic: clinic,
-      specialization: specialization,
+
       type: type,
       active: active,
     );
@@ -124,8 +112,7 @@ class Auth {
         "access_token": accessToken,
         "refreshToken": refreshToken,
         "user": user?.toJson(),
-        "clinic": clinic?.toJson(),
-        "specialization": specialization?.toJson(),
+
         "type": type,
         "active": active
       };

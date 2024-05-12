@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:news_app_ui/screen/add_profile_health/views/add_profile_health_view.dart';
-import 'package:news_app_ui/screen/home/home_page.dart';
 import 'package:news_app_ui/screen/main_tab_bar/main_tab_controller.dart';
-import 'package:news_app_ui/screen/search/search_page.dart';
 
 import '../../../gen/assets.gen.dart';
 import '../../../utils/constants/app_colors.dart';
-import '../page/page.dart';
 import 'widgets/bottom_icon_widget.dart';
 
 class MainTabBar extends GetView<MainTabController> {

@@ -3,9 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:news_app_ui/data/model/commune.dart';
-import 'package:news_app_ui/data/model/distric.dart';
-import 'package:news_app_ui/data/model/province.dart';
+
 import 'package:news_app_ui/data/providers/auth_provider.dart';
 import 'package:news_app_ui/data/providers/base_controller/base_controller.dart';
 import 'package:news_app_ui/screen/add_profile_health/views/add_profile_health_view.dart';
@@ -37,9 +35,7 @@ class AddProfileHealthController extends BaseController {
   Rx<DateTime> selectedLMDate = DateTime.now().obs;
   Rx<String> selectedGender = ''.obs;
   Rx<String> selectedRelationship = ''.obs;
-  Rx<Province> selectedProvince = Province.empty().obs;
-  Rx<Distric> selectedDistric = Distric.empty().obs;
-  Rx<Commune> selectedCommune = Commune.empty().obs;
+
   final AuthProvider authProvider = AuthProvider();
   final List<String> listGender = ['Nam', 'Nữ'];
   final List<String> listRelationship = [
@@ -60,9 +56,7 @@ class AddProfileHealthController extends BaseController {
     'Vợ'
   ];
   RxList<String> listRelationshipObx = RxList([]);
-  RxList<Province> listProvince = RxList([]);
-  RxList<Commune> listCommune = RxList([]);
-  RxList<Distric> listDistric = RxList([]);
+
 
   String convertPhoneNumber(String phoneNumber) {
     int slashIndex = phoneNumber.indexOf('/');
@@ -82,7 +76,7 @@ class AddProfileHealthController extends BaseController {
     if (!validateCMTBool()) {
       return;
     }
- 
+
     if (formKey5.currentState == null || !(formKey5.currentState!.validate())) {
       return;
     }

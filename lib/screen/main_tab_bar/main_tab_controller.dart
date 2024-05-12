@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
-import 'package:news_app_ui/data/model/news_model.dart';
+import 'package:news_app_ui/data/model/new_model.dart';
+
 import 'package:news_app_ui/data/model/pagination.dart';
 import 'package:news_app_ui/data/providers/auth_provider.dart';
 import 'package:news_app_ui/data/providers/base_controller/base_controller.dart';
@@ -12,7 +13,7 @@ class MainTabController extends PaginationController<NewsModel> {
   final authProvider = AuthProvider();
   final newModel = NewsModel().obs;
   final pages = [
-    HomePage(),
+    const HomePage(),
     const SearchPage(),
     const SamplePage(
       title: 'Book Mark Page',

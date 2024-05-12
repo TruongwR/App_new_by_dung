@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:news_app_ui/gen/assets.gen.dart';
 import 'package:news_app_ui/utils/app_style.dart';
 
 

@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:intl/intl.dart';
-import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:news_app_ui/config/theme/ui_constants.dart';
 import 'package:news_app_ui/utils/app_style.dart';
 import 'package:news_app_ui/utils/date_form_flied.dart';
-import 'package:news_app_ui/utils/img_loader.dart';
 
 import 'package:news_app_ui/utils/primary/primary_button.dart';
 

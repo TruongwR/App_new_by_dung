@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:news_app_ui/config/theme/ui_constants.dart';
-import 'package:news_app_ui/data/model/news_model.dart';
+import 'package:news_app_ui/data/model/new_model.dart';
+
 import 'package:news_app_ui/screen/details/details_page.dart';
-import 'package:news_app_ui/screen/home/home_controller.dart';
 import 'package:news_app_ui/screen/main_tab_bar/main_tab_controller.dart';
 import 'package:news_app_ui/utils/base_page.dart';
 import 'package:news_app_ui/utils/constants/app_colors.dart';
@@ -14,11 +14,9 @@ import 'package:news_app_ui/utils/empty_widget.dart';
 import 'package:news_app_ui/utils/primary/primary_list_view.dart';
 import 'package:news_app_ui/widgets/spacer/spacer_custom.dart';
 
-import '../../dummy_data/dummy_data.dart';
 import '../../gen/assets.gen.dart';
 import 'widgets/card_view_widget.dart';
 import 'widgets/home_header_widget.dart';
-import 'widgets/horizontal_category_list.dart';
 import 'widgets/round_icon_button_widget.dart';
 import 'widgets/top_slider_widget.dart';
 
@@ -84,7 +82,7 @@ class HomePage extends BasePage<MainTabController> {
                       ));
                 }
 
-                return Container(
+                return SizedBox(
                   height: 600,
                   child: LoadMoreWidget<NewsModel>(
                       controller: controller,
