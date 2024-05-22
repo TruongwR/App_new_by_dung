@@ -215,16 +215,16 @@ class LoginView extends GetView<LoginController> {
                                                   ))),
                                           validator: (value) => controller.validatorPassword(value),
                                         )),
-                                    UIConst.height8,
-                                    TextFormField(
-                                      controller: controller.addressController,
-                                      style: Styles.captionBold.neutral2(context),
-                                      decoration: InputDecoration(
-                                        labelText: 'Địa Chỉ',
-                                        labelStyle: Styles.caption3.neutral4(context),
-                                      ),
-                                      validator: (value) => controller.validatorAddress(value),
-                                    ),
+                                    // UIConst.height8,
+                                    // TextFormField(
+                                    //   controller: controller.addressController,
+                                    //   style: Styles.captionBold.neutral2(context),
+                                    //   decoration: InputDecoration(
+                                    //     labelText: 'Địa Chỉ',
+                                    //     labelStyle: Styles.caption3.neutral4(context),
+                                    //   ),
+                                    //   validator: (value) => controller.validatorAddress(value),
+                                    // ),
                                     UIConst.height8,
                                     const SizedBox(height: 16),
                                     Obx(() => DateTimePickerFormField(

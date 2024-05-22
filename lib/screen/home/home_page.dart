@@ -78,7 +78,7 @@ class HomePage extends BasePage<MainTabController> {
                   return const SizedBox(
                       height: 600,
                       child: EmptyWidget(
-                        text: 'Không tìm thấy lịch khám nào',
+                        text: 'Chưa có tin tức nào',
                       ));
                 }
 
@@ -99,7 +99,7 @@ class HomePage extends BasePage<MainTabController> {
                             return CardViewWidget2(
                               image: bytes,
                               name: data.title ?? '',
-                              author: 'Admin',
+                              author: '',
                               onTap: () {
                                 controller.newModel.value = data;
                                 Get.to(const DetailsPage());

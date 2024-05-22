@@ -7,7 +7,7 @@ import 'package:news_app_ui/config/theme/theme_service.dart';
 import 'package:news_app_ui/routes/app_pages.dart';
 import 'package:news_app_ui/utils/auth_service.dart';
 
-import 'screen/add_profile_health/controllers/add_profile_health_controller.dart';
+import 'screen/add_profile_health/controllers/manage_profile_controller.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

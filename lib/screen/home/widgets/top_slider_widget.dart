@@ -29,7 +29,7 @@ class TopSliderWidget extends StatelessWidget {
           children: [
             const Spacer(),
             const Text(
-              'Japan exhibition showcasing opens in London, April 24 ',
+              'Quốc hội sẽ phê chuẩn miễn nhiệm chức Bộ trưởng Công an với đại tướng Tô Lâm',
               style: TextStyle(
 
                 fontSize: 16,
@@ -41,16 +41,16 @@ class TopSliderWidget extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  'By Nakamura',
-                  style: TextStyle(
+                // const Text(
+                //   'By Nakamura',
+                //   style: TextStyle(
 
-                    fontSize: 12,
-                    fontWeight: FontWeight.w400,
-                    height: 1.4,
-                    color: Color(0xffffffff),
-                  ),
-                ),
+                //     fontSize: 12,
+                //     fontWeight: FontWeight.w400,
+                //     height: 1.4,
+                //     color: Color(0xffffffff),
+                //   ),
+                // ),
                 Image.asset(
                   Assets.images.slider.path,
                   width: 48,

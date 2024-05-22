@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:news_app_ui/data/model/auth_model.dart';
 
+import '../routes/app_pages.dart';
+
 
 class AuthService extends GetxService {
   Auth? _auth;
@@ -89,6 +91,6 @@ class AuthService extends GetxService {
     removeAuther();
     removeToken();
     removeRole();
-    // Get.offAllNamed(Routes.LOGIN);
+    Get.offAllNamed(Routes.LOGIN);
   }
 }

@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:news_app_ui/screen/add_profile_health/bindings/add_profile_health_binding.dart';
-import 'package:news_app_ui/screen/add_profile_health/views/add_profile_health_view.dart';
+import 'package:news_app_ui/screen/add_profile_health/bindings/manage_profile_binding.dart';
+import 'package:news_app_ui/screen/add_profile_health/views/mange_profile_view.dart';
 import 'package:news_app_ui/screen/home/home_page.dart';
 import 'package:news_app_ui/screen/home/widgets/home_binding.dart';
 import 'package:news_app_ui/screen/login/bindings/login_binding.dart';

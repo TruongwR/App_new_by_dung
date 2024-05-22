@@ -45,6 +45,32 @@ class AuthProvider extends BaseProvider {
     return true;
   }
 
+Future<bool?> udpateProfile({
+    required String phone,
+    required String name,
+    required String email,
+    required String password,
+    required String address,
+    required String date,
+    required int sex,
+    int? id
+  }) async {
+    final data = { 
+      "id": id,
+      "phone": phone,
+      "name": name,
+      "email": email,
+      "password": password,
+      "address": address,
+      "birthDate": date,
+      "gender": "$sex",
+      "role": {"id": "3"}
+    };
+
+    await putRequest('/user/user/update', data);
+
+    return true;
+  }
   Future<bool> logout() async {
     // await getRequest('/api/logout');
     authService.logOut();
@@ -55,6 +81,13 @@ class AuthProvider extends BaseProvider {
     final dataBody = {"newest": newest};
     return await getRequestPagination(
         api: '/news/home?page=$page&size=$limit',
+        parse: (json) => NewsModel.fromJson(json),
+        queryParameters: dataBody);
+  }
+    Future<PaginationData<NewsModel>?> search({required int page, required int limit, required bool newest, String? keys}) async {
+    final dataBody = {"newest": newest};
+    return await getRequestPagination(
+        api: '/news/find?page=$page&size=$limit&keys=$keys',
         parse: (json) => NewsModel.fromJson(json),
         queryParameters: dataBody);
   }

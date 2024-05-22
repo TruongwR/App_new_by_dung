@@ -135,7 +135,7 @@ abstract class PaginationController<T> extends BaseController {
   }
 
   Future<void> onRefresh() async {
-    page.value = 0;
+    page.value = -1;
     endOfPage.value = false;
     await _requestApi(true);
   }

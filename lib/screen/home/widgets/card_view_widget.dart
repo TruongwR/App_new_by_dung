@@ -136,15 +136,16 @@ class CardViewWidget2 extends StatelessWidget {
 
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
-                      height: 1.3,
+                      // height: 1.3,
+                      height: 1.8,
                       color: Color(0xff1a434e),
                     ),
                   ),
                   const CustomHeightSpacer(size: 0.005,),
 
                   RichText(
-                    text: TextSpan(
-                      style: const TextStyle (
+                    text: const TextSpan(
+                      style: TextStyle (
 
                         fontSize: 12,
                         fontWeight: FontWeight.w400,
@@ -152,19 +153,19 @@ class CardViewWidget2 extends StatelessWidget {
                         color: Color(0xff95a6aa),
                       ),
                       children: [
-                        const TextSpan(
-                          text: 'By ',
-                        ),
-                        TextSpan(
-                          text: author,
-                          style: const TextStyle (
+                        // const TextSpan(
+                        //   text: 'By ',
+                        // ),
+                        // TextSpan(
+                        //   text: author,
+                        //   style: const TextStyle (
 
-                            fontSize: 12,
-                            fontWeight: FontWeight.w400,
-                            height: 1.4,
-                            color: Color(0xff1a434e),
-                          ),
-                        ),
+                        //     fontSize: 12,
+                        //     fontWeight: FontWeight.w400,
+                        //     height: 1.4,
+                        //     color: Color(0xff1a434e),
+                        //   ),
+                        // ),
                       ],
                     ),
                   ),
