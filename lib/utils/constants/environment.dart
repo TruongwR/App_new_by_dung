@@ -13,9 +13,9 @@ extension EnvironmentEx on Environment {
   String get urlDevice {
     switch (this) {
       case Environment.dev:
-        return 'http://192.168.0.106:8080/api';
+        return 'http://localhost:8080/api';
       case Environment.main:
-        return 'http://192.168.0.106:8080/api';
+        return 'http://localhost:8080/api';
     }
   }
 
