@@ -6,8 +6,8 @@ import 'package:get/get.dart';
 import 'package:news_app_ui/config/theme/ui_constants.dart';
 import 'package:news_app_ui/data/model/new_model.dart';
 
-import 'package:news_app_ui/screen/details/details_page.dart';
-import 'package:news_app_ui/screen/main_tab_bar/main_tab_controller.dart';
+import 'package:news_app_ui/screen/main_tab_bar/page/details/details_page.dart';
+import 'package:news_app_ui/screen/main_tab_bar/controller/main_tab_controller.dart';
 import 'package:news_app_ui/utils/base_page.dart';
 import 'package:news_app_ui/utils/constants/app_colors.dart';
 import 'package:news_app_ui/utils/empty_widget.dart';

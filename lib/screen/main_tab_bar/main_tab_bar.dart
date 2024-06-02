@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:news_app_ui/screen/main_tab_bar/main_tab_controller.dart';
+import 'package:news_app_ui/screen/main_tab_bar/controller/main_tab_controller.dart';
 
 import '../../../gen/assets.gen.dart';
 import '../../../utils/constants/app_colors.dart';

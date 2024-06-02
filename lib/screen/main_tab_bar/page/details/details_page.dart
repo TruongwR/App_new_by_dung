@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:get/get.dart';
-import 'package:news_app_ui/screen/details/widgets/details_header_widget.dart';
-import 'package:news_app_ui/screen/main_tab_bar/main_tab_controller.dart';
+import 'package:news_app_ui/screen/main_tab_bar/page/details/widgets/details_header_widget.dart';
+import 'package:news_app_ui/screen/main_tab_bar/controller/main_tab_controller.dart';
 import 'package:news_app_ui/utils/constants/app_colors.dart';
 
 class DetailsPage extends GetView<MainTabController> {

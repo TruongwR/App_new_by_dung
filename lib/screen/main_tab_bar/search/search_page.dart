@@ -5,16 +5,16 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:news_app_ui/config/theme/ui_constants.dart';
 import 'package:news_app_ui/data/model/new_model.dart';
-import 'package:news_app_ui/screen/main_tab_bar/main_tab_controller.dart';
+import 'package:news_app_ui/screen/main_tab_bar/controller/main_tab_controller.dart';
 import 'package:news_app_ui/utils/constants/app_colors.dart';
 import 'package:news_app_ui/utils/empty_widget.dart';
 import 'package:news_app_ui/utils/primary/primary_list_view.dart';
 import 'package:news_app_ui/widgets/spacer/spacer_custom.dart';
 
-import '../../dummy_data/dummy_data.dart';
-import '../../utils/base_page.dart';
-import '../details/details_page.dart';
-import '../home/widgets/card_view_widget.dart';
+import '../../../dummy_data/dummy_data.dart';
+import '../../../utils/base_page.dart';
+import '../page/details/details_page.dart';
+import '../../home/widgets/card_view_widget.dart';
 import 'widgets/search_bar_widget.dart';
 import 'widgets/search_header_widget.dart';
 import 'widgets/trending_topic_widget.dart';
@@ -95,7 +95,7 @@ class SearchPage extends  BasePage<MainTabController>{
                           text: 'Không tìm thấy tin tức nào',
                         ));
                   }
-                
+
                   return SizedBox(
                     height: 600,
                     child: LoadMoreWidget<NewsModel>(
@@ -135,7 +135,7 @@ class SearchPage extends  BasePage<MainTabController>{
   }
 
   @override
-  
+
   bool get showback => false;
 
   @override

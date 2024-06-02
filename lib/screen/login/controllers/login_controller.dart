@@ -33,24 +33,8 @@ class LoginController extends BaseController {
   Rx<int> selectedGender = 1.obs;
   final RxBool showSignup = false.obs;
   final AuthProvider authProvider = AuthProvider();
-  @override
-  void onInit() {
-    // oldLogin();
-    super.onInit();
-  }
 
-  // void oldLogin() async {
-  //   final access = authService.getAccessToken();
-  //   final role = authService.getRole();
-  //   if (access != null && role != null) {
-  //     if (role == 'PATIENT') {
-  //       Get.offAndToNamed(Routes.HOME);
-  //     }
-  //     if (role == 'STAFF') {
-  //       Get.offAndToNamed(Routes.SIGN_UP);
-  //     }
-  //   } else {}
-  // }
+
 
   void login() async {
     // if (!validatePhoneNumber()) {
@@ -69,9 +53,6 @@ class LoginController extends BaseController {
       // Get.offAndToNamed(Routes.HOME);
       if (respon.user?.role.id == 3) {
         Get.offAndToNamed(Routes.HOME);
-      }
-      if (respon.user?.role.id == 2) {
-        Get.offAndToNamed(Routes.DOCTOR_HOME);
       }
     }
   }

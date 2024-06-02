@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:news_app_ui/screen/main_tab_bar/main_tab_controller.dart';
+import 'package:news_app_ui/screen/main_tab_bar/controller/main_tab_controller.dart';
 
-import '../../../gen/assets.gen.dart';
-import '../../../utils/constants/app_colors.dart';
-import '../../../widgets/spacer/spacer_custom.dart';
+import '../../../../gen/assets.gen.dart';
+import '../../../../utils/constants/app_colors.dart';
+import '../../../../widgets/spacer/spacer_custom.dart';
 
 class SearchBarWidget extends GetView<MainTabController> {
   const SearchBarWidget({
@@ -59,7 +59,7 @@ class SearchBarWidget extends GetView<MainTabController> {
                   height: 1.8,
                   color: Color(0xff95a6aa),
                 ),
-                  
+
                 ),
               ),
             )

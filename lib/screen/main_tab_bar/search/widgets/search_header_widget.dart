@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../gen/assets.gen.dart';
-import '../../../utils/constants/app_colors.dart';
-import '../../home/widgets/round_icon_button_widget.dart';
+import '../../../../gen/assets.gen.dart';
+import '../../../../utils/constants/app_colors.dart';
+import '../../../home/widgets/round_icon_button_widget.dart';
 
 class SearchHeaderWidget extends StatelessWidget {
   const SearchHeaderWidget({

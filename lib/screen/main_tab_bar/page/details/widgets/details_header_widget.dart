@@ -3,12 +3,12 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:news_app_ui/screen/main_tab_bar/main_tab_controller.dart';
+import 'package:news_app_ui/screen/main_tab_bar/controller/main_tab_controller.dart';
 
-import '../../../gen/assets.gen.dart';
-import '../../../utils/constants/app_colors.dart';
-import '../../../widgets/spacer/spacer_custom.dart';
-import '../../home/widgets/round_icon_button_widget.dart';
+import '../../../../../gen/assets.gen.dart';
+import '../../../../../utils/constants/app_colors.dart';
+import '../../../../../widgets/spacer/spacer_custom.dart';
+import '../../../../home/widgets/round_icon_button_widget.dart';
 
 class DetailsHeaderWidget extends GetView<MainTabController> {
   const DetailsHeaderWidget({super.key, this.onTap});
