@@ -19,10 +19,10 @@ import 'widgets/search_bar_widget.dart';
 import 'widgets/search_header_widget.dart';
 import 'widgets/trending_topic_widget.dart';
 
-class SearchPage extends  BasePage<MainTabController>{
+class SearchPage extends BasePage<MainTabController> {
   @override
   Widget body(BuildContext context) {
-  return  Scaffold(
+    return Scaffold(
       backgroundColor: AppColors.backGroundColor,
       body: SingleChildScrollView(
         child: Padding(
@@ -83,50 +83,49 @@ class SearchPage extends  BasePage<MainTabController>{
                   color: Color(0xff1a434e),
                 ),
               ),
-                Obx(() {
-                  final list = controller.items.value;
-                  if (controller.loading.value) {
-                    return const LoadingWidget();
-                  }
-                  if (list.isEmpty) {
-                    return const SizedBox(
-                        height: 600,
-                        child: EmptyWidget(
-                          text: 'Không tìm thấy tin tức nào',
-                        ));
-                  }
+              Obx(() {
+                final list = controller.items.value;
+                if (controller.loading.value) {
+                  return const LoadingWidget();
+                }
+                if (list.isEmpty) {
+                  return const SizedBox(
+                      height: 600,
+                      child: EmptyWidget(
+                        text: 'Không tìm thấy tin tức nào',
+                      ));
+                }
 
-                  return SizedBox(
-                    height: 600,
-                    child: LoadMoreWidget<NewsModel>(
-                        controller: controller,
-                        scrollView: (items) {
-                          return ListView.separated(
-                            shrinkWrap: true,
-                            physics: const NeverScrollableScrollPhysics(),
-                            padding: EdgeInsets.zero,
-                            itemBuilder: (context, index) {
-                              final data = items[index];
-                              Uint8List bytes = base64Decode((data.thumbnail ?? "")
-                                  .replaceAll("data:image/jpeg;base64,", "")
-                                  .replaceAll("data:image/png;base64,", ""));
-                              return CardViewWidget2(
-                                image: bytes,
-                                name: data.title ?? '',
-                                author: '',
-                                onTap: () {
-                                  controller.newModel.value = data;
-                                  Get.to(const DetailsPage());
-                                },
-                              );
-                            },
-                            separatorBuilder: (context, index) => UIConst.height8,
-                            itemCount: items.length,
-                          );
-                        }),
-                  );
-                })
-
+                return SizedBox(
+                  height: 600,
+                  child: LoadMoreWidget<NewsModel>(
+                      controller: controller,
+                      scrollView: (items) {
+                        return ListView.separated(
+                          shrinkWrap: true,
+                          physics: const NeverScrollableScrollPhysics(),
+                          padding: EdgeInsets.zero,
+                          itemBuilder: (context, index) {
+                            final data = items[index];
+                            Uint8List bytes = base64Decode((data.thumbnail ?? "")
+                                .replaceAll("data:image/jpeg;base64,", "")
+                                .replaceAll("data:image/png;base64,", ""));
+                            return CardViewWidget2(
+                              image: bytes,
+                              name: data.title ?? '',
+                              author: '',
+                              onTap: () {
+                                controller.newModel.value = data;
+                                Get.to(const DetailsPage());
+                              },
+                            );
+                          },
+                          separatorBuilder: (context, index) => UIConst.height8,
+                          itemCount: items.length,
+                        );
+                      }),
+                );
+              })
             ],
           ),
         ),
@@ -135,10 +134,8 @@ class SearchPage extends  BasePage<MainTabController>{
   }
 
   @override
-
   bool get showback => false;
 
   @override
-
   String? get titlePage => '';
 }
