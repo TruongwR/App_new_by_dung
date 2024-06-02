@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 
 import 'package:news_app_ui/data/providers/auth_provider.dart';
 import 'package:news_app_ui/data/providers/base_controller/base_controller.dart';
-import 'package:news_app_ui/screen/add_profile_health/views/mange_profile_view.dart';
+import 'package:news_app_ui/screen/manager_profile/views/mange_profile_view.dart';
 import 'package:news_app_ui/utils/auth_service.dart';
 
 class AddProfileHealthController extends BaseController {
