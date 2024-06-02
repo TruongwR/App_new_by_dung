@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:news_app_ui/screen/bookmark/controllers/bookmark_controller.dart';
 import 'package:news_app_ui/screen/home/home_controller.dart';
 import 'package:news_app_ui/screen/main_tab_bar/controller/main_tab_controller.dart';
 
@@ -10,6 +11,9 @@ class MainTabBinding extends Bindings {
     );
      Get.lazyPut<HomeController>(
       () => HomeController(),
+    );
+        Get.lazyPut<BookmarkController>(
+      () => BookmarkController(),
     );
   }
 }

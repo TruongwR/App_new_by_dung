@@ -43,4 +43,40 @@ class RoundIconButtonWidget extends StatelessWidget {
       ),
     );
   }
+}class RoundIconButtonWidget2 extends StatelessWidget {
+  const RoundIconButtonWidget2({
+    super.key,
+    required this.iconColor,
+    required this.iconWidth,
+    required this.iconHeight,
+    required this.borderColor,
+    this.onTap,
+    required this.iconName,
+  });
+
+  final Color borderColor;
+  final Widget iconName;
+
+  final Color iconColor;
+  final double iconWidth;
+  final double iconHeight;
+  final Function()? onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        decoration: BoxDecoration(
+            border: Border.all(
+              color: AppColors.borderColor,
+            ),
+            borderRadius: const BorderRadius.all(Radius.circular(20))),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: iconName,
+        ),
+      ),
+    );
+  }
 }

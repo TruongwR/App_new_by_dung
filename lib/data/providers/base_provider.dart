@@ -12,7 +12,7 @@ import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 class BaseProvider {
   final dio = Dio();
   final authService = AuthService.to;
-  String kBaseUrl = environment.urlDevice;
+  String kBaseUrl = environment.url;
 
   BaseProvider() {
     dio.interceptors.add(PrettyDioLogger(

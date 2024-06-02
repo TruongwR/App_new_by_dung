@@ -1,12 +1,15 @@
 import 'package:get/get.dart';
-import 'package:news_app_ui/screen/manager_profile/bindings/manage_profile_binding.dart';
-import 'package:news_app_ui/screen/manager_profile/views/mange_profile_view.dart';
-import 'package:news_app_ui/screen/home/home_page.dart';
-import 'package:news_app_ui/screen/home/widgets/home_binding.dart';
-import 'package:news_app_ui/screen/login/bindings/login_binding.dart';
-import 'package:news_app_ui/screen/login/views/login_view.dart';
-import 'package:news_app_ui/screen/main_tab_bar/main_tab_bar.dart';
-import 'package:news_app_ui/screen/main_tab_bar/binding/main_tab_binding.dart';
+
+import '../screen/bookmark/bindings/bookmark_binding.dart';
+import '../screen/bookmark/views/bookmark_view.dart';
+import '../screen/home/home_page.dart';
+import '../screen/home/widgets/home_binding.dart';
+import '../screen/login/bindings/login_binding.dart';
+import '../screen/login/views/login_view.dart';
+import '../screen/main_tab_bar/binding/main_tab_binding.dart';
+import '../screen/main_tab_bar/main_tab_bar.dart';
+import '../screen/manager_profile/bindings/manage_profile_binding.dart';
+import '../screen/manager_profile/views/mange_profile_view.dart';
 
 part 'app_routes.dart';
 
@@ -35,6 +38,11 @@ class AppPages {
       name: _Paths.HOMEBOUND,
       page: () => const HomePage(),
       binding: HomeBinding(),
+    ),
+    GetPage(
+      name: _Paths.BOOKMARK,
+      page: () => const BookmarkView(),
+      binding: BookmarkBinding(),
     ),
   ];
 }

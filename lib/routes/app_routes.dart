@@ -15,6 +15,7 @@ abstract class Routes {
   static const DETAIL_PROFILE = _Paths.DETAIL_PROFILE;
 
   static const ADD_PROFILE_HEALTH = _Paths.ADD_PROFILE_HEALTH;
+  static const BOOKMARK = _Paths.BOOKMARK;
 }
 
 abstract class _Paths {
@@ -29,4 +30,5 @@ abstract class _Paths {
   static const DETAIL_PROFILE = '/detail-profile';
 
   static const ADD_PROFILE_HEALTH = '/add-profile-health';
+  static const BOOKMARK = '/bookmark';
 }

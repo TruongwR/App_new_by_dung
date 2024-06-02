@@ -45,17 +45,16 @@ class AuthProvider extends BaseProvider {
     return true;
   }
 
-Future<bool?> udpateProfile({
-    required String phone,
-    required String name,
-    required String email,
-    required String password,
-    required String address,
-    required String date,
-    required int sex,
-    int? id
-  }) async {
-    final data = { 
+  Future<bool?> udpateProfile(
+      {required String phone,
+      required String name,
+      required String email,
+      required String password,
+      required String address,
+      required String date,
+      required int sex,
+      int? id}) async {
+    final data = {
       "id": id,
       "phone": phone,
       "name": name,
@@ -71,6 +70,7 @@ Future<bool?> udpateProfile({
 
     return true;
   }
+
   Future<bool> logout() async {
     // await getRequest('/api/logout');
     authService.logOut();
@@ -80,15 +80,27 @@ Future<bool?> udpateProfile({
   Future<PaginationData<NewsModel>?> fetchNew({required int page, required int limit, required bool newest}) async {
     final dataBody = {"newest": newest};
     return await getRequestPagination(
-        api: '/news/home?page=$page&size=$limit',
-        parse: (json) => NewsModel.fromJson(json),
-        queryParameters: dataBody);
+        api: '/news/home?page=$page&size=$limit', parse: (json) => NewsModel.fromJson(json), queryParameters: dataBody);
   }
-    Future<PaginationData<NewsModel>?> search({required int page, required int limit, required bool newest, String? keys}) async {
+
+  Future<PaginationData<NewsModel>?> fetchBookMark({required int page, required int limit}) async {
+    return await getRequestPagination(
+      api: '/user/news/list-bookmark&userId=${authService.auth.user?.id}',
+      parse: (json) => NewsModel.fromJson(json),
+    );
+  }
+
+  Future<PaginationData<NewsModel>?> search(
+      {required int page, required int limit, required bool newest, String? keys}) async {
     final dataBody = {"newest": newest};
     return await getRequestPagination(
         api: '/news/find?page=$page&size=$limit&keys=$keys',
         parse: (json) => NewsModel.fromJson(json),
         queryParameters: dataBody);
+  }
+
+  Future<bool> bookmask({required int id, required bool favor}) async {
+    await postRequest('/user/news/bookmark?id=$id&favor=$favor&userId=${authService.auth.user?.id}', {});
+    return favor;
   }
 }

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:news_app_ui/screen/main_tab_bar/controller/main_tab_controller.dart';
+import 'package:news_app_ui/utils/app_style.dart';
 
 import '../../../../../gen/assets.gen.dart';
 import '../../../../../utils/constants/app_colors.dart';
@@ -84,14 +85,22 @@ class DetailsHeaderWidget extends GetView<MainTabController> {
                       ],
                     ),
                   ),
-                  RoundIconButtonWidget(
-                    iconName: Assets.icons.icArchiveAdd.path,
-                    iconColor: AppColors.backGroundColor,
-                    iconWidth: 20,
-                    iconHeight: 20,
-                    borderColor: AppColors.borderColor,
-                    onTap: () {},
-                  ),
+                  Obx(() {
+                    final isBookMark = controller.isBookMark.value;
+                    return RoundIconButtonWidget2(
+                      iconName: isBookMark
+                          ? Icon(Icons.bookmark_add_outlined, color: AppColors.backGroundColor)
+                          : Icon(Icons.bookmark_added, color: AppColors.backGroundColor),
+                      iconColor: isBookMark ? AppColors.backGroundColor : ColorsConst.red,
+                      iconWidth: 20,
+                      iconHeight: 20,
+                      borderColor: AppColors.borderColor,
+                      onTap: () {
+                        controller.isBookMark.value = !isBookMark;
+                        controller.bookmark(id: newModel.id ?? 0, favor: controller.isBookMark.value);
+                      },
+                    );
+                  })
                 ],
               ),
             )
