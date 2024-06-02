@@ -15,12 +15,12 @@ class HomeController extends PaginationController<NewsModel> {
 
   @override
   void onInit() {
-    onRefresh();
+    fetchApi(0);
     super.onInit();
   }
 
   @override
   Future<PaginationData<NewsModel>?> fetchApi(int page) {
-    return authProvider.fetchNew(page: page, limit: 10, newest: false);
+    return authProvider.fetchNew(page: page, limit: 100, newest: false);
   }
 }

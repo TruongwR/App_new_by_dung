@@ -27,17 +27,17 @@ class HomeHeaderWidget extends StatelessWidget {
                 color: Color(0xff94a5aa),
               ),
             ),
-            Text(
-              'Jordan Klik',
-              textAlign: TextAlign.center,
-              style: TextStyle(
+            // Text(
+            //   'Jordan Klik',
+            //   textAlign: TextAlign.center,
+            //   style: TextStyle(
 
-                fontSize: 24,
-                fontWeight: FontWeight.w700,
-                height: 1.3,
-                color: Color(0xff1a434e),
-              ),
-            )
+            //     fontSize: 24,
+            //     fontWeight: FontWeight.w700,
+            //     height: 1.3,
+            //     color: Color(0xff1a434e),
+            //   ),
+            // )
           ],
         ),
         RoundIconButtonWidget(

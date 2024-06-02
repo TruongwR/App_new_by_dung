@@ -37,43 +37,7 @@ class SearchPage extends  BasePage<MainTabController>{
               const SearchBarWidget(),
               const CustomHeightSpacer(
                 size: 0.04,
-              ),
-              const Text(
-                'Trending topic today',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700,
-                  height: 1.3,
-                  color: Color(0xff1a434e),
-                ),
-              ),
-              const CustomHeightSpacer(
-                size: 0.03,
-              ),
-              const TrendingTopicWidget(
-                name: 'Politics',
-              ),
-              const CustomHeightSpacer(
-                size: 0.02,
-              ),
-              const TrendingTopicWidget(
-                name: 'Politics',
-              ),
-              const CustomHeightSpacer(
-                size: 0.02,
-              ),
-              const TrendingTopicWidget(
-                name: 'Investment',
-              ),
-              const CustomHeightSpacer(
-                size: 0.02,
-              ),
-              const TrendingTopicWidget(
-                name: 'Business',
-              ),
-              const CustomHeightSpacer(
-                size: 0.04,
-              ),
+              ), 
               const Text(
                 'Trending topic today',
                 style: TextStyle(

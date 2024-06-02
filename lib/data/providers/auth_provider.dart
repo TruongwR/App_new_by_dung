@@ -91,4 +91,9 @@ Future<bool?> udpateProfile({
         parse: (json) => NewsModel.fromJson(json),
         queryParameters: dataBody);
   }
+  Future<bool> bookMark({required int id, required bool favor, required int userId}) async {
+    final dataBody = {"id": id,"favor":favor,"userId":userId};
+     await postWithoutHandle('/user/news/bookmark',queryParameters: dataBody);
+    return true;
+  }
 }

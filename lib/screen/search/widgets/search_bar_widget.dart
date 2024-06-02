@@ -33,16 +33,6 @@ class SearchBarWidget extends GetView<MainTabController> {
             const CustomWidthSpacer(
               size: 0.03,
             ),
-            // const Text(
-            //   'Search article, topic, writer',
-            //   style: TextStyle(
-
-            //     fontSize: 14,
-            //     fontWeight: FontWeight.w400,
-            //     height: 1.8,
-            //     color: Color(0xff95a6aa),
-            //   ),
-            // ),
             Expanded(
               child: TextFormField(
                 controller: controller.search,

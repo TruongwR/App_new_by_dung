@@ -120,29 +120,7 @@ class LoginView extends GetView<LoginController> {
                                               style: Styles.button1.primary1(context),
                                             ))
                                       ],
-                                    ),
-                                    // UIConst.height8,
-                                    // IntlPhoneField(
-                                    //   controller: controller.phoneController,
-                                    //   focusNode: controller.phoneFocusNode,
-                                    //   initialCountryCode: Get.deviceLocale?.countryCode,
-                                    //   decoration: const InputDecoration(
-                                    //     hintText: 'Nhập Số điện thoại của bạn',
-                                    //     isDense: true,
-                                    //     contentPadding: EdgeInsets.only(top: 14),
-                                    //   ),
-                                    //   onSaved: (phone) {
-                                    //     controller.phoneNumber = phone;
-                                    //   },
-                                    //   onCountryChanged: (value) {
-                                    //     controller.phoneNumber?.countryCode = value.dialCode;
-                                    //   },
-                                    //   onChanged: (phone) {
-                                    //     controller.phoneNumber = phone;
-                                    //   },
-                                    //   disableLengthCheck: true,
-                                    //   validator: (p0) => controller.validatorPhone(controller.phoneController.text),
-                                    // ),
+                                    ), 
                                     UIConst.height8,
                                     TextFormField(
                                       controller: controller.phoneController,
@@ -255,35 +233,9 @@ class LoginView extends GetView<LoginController> {
                                           valueSelect: 2,
                                           icon: Icon(Icons.female,
                                               size: 24, color: ColorsConst.themeColor(context).neutral2),
-                                        ),
-                                        // IconPrimaryButton(
-                                        //   title: 'Quét CCCD',
-                                        //   onPress: () {
-                                        //     Get.toNamed(Routes.QR_COPY);
-                                        //   },
-                                        //   icon: const Icon(Icons.camera_alt),
-                                        // )
-
-                                        // itemChose(
-                                        //   context: context,
-                                        //   valueSelect: 2,
-                                        //   icon: SVGLoader.image('ic_gender',
-                                        //       size: 24, color: ColorsConst.themeColor(context).neutral2),
-                                        // ),
+                                        ), 
                                       ],
-                                    ),
-                                    // Row(
-                                    //   mainAxisAlignment: MainAxisAlignment.center,
-                                    //   crossAxisAlignment: CrossAxisAlignment.center,
-                                    //   children: [
-                                    //     Obx(() => Visibility(
-                                    //         visible: controller.selectedGender.value == 1,
-                                    //         child: Text(
-                                    //           'Vui lòng chọn giới tính',
-                                    //           style: Styles.caption2.primary3(context),
-                                    //         ))),
-                                    //   ],
-                                    // ),
+                                    ), 
 
                                     UIConst.height8,
                                     PrimaryButton(

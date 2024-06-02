@@ -4,6 +4,8 @@
 
 import 'dart:convert';
 
+import 'package:get/get.dart';
+
 NewsModel newsModelFromJson(String str) => NewsModel.fromJson(json.decode(str));
 
 String newsModelToJson(NewsModel data) => json.encode(data.toJson());
@@ -19,6 +21,7 @@ class NewsModel {
     final dynamic updatedDate;
     final bool? deleted;
     final List<dynamic>? hashtags;
+    RxBool select;
 
     NewsModel({
         this.id,
@@ -31,7 +34,8 @@ class NewsModel {
         this.updatedDate,
         this.deleted,
         this.hashtags,
-    });
+      bool  selectDefault=false,
+    }):select=selectDefault.obs;
 
     factory NewsModel.fromJson(Map<String, dynamic> json) => NewsModel(
         id: json["id"],

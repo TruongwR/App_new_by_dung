@@ -13,6 +13,7 @@ import 'package:news_app_ui/screen/search/search_page.dart';
 class MainTabController extends PaginationController<NewsModel> {
   final authProvider = AuthProvider();
   final newModel = NewsModel().obs;
+
   final TextEditingController search= TextEditingController();
   final pages = [
     const HomePage(),
@@ -42,6 +43,6 @@ class MainTabController extends PaginationController<NewsModel> {
 
   @override
   Future<PaginationData<NewsModel>?> fetchApi(int page) {
-    return pageIndex.value==0?  authProvider.fetchNew(page: page, limit: 10, newest: true):authProvider.search(page: page, limit: 10, newest: true, keys: search.text);
+    return pageIndex.value==0?  authProvider.fetchNew(page: page, limit: 100, newest: true):authProvider.search(page: page, limit: 100, newest: true, keys: search.text);
   }
 }
